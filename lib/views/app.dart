@@ -12,14 +12,15 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Teste Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.green,
-        ),
-        home: SplashPage(),
-        routes: <String, WidgetBuilder>{
-          '/home': (BuildContext context) => HomePage(),
-          '/login': (BuildContext context) => LoginPage(),
-        });
+      title: 'Teste Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+      ),
+      home: SplashPage(),
+      routes: <String, WidgetBuilder>{
+        '/home': (BuildContext context) => HomePage(),
+        '/login': (BuildContext context) => LoginPage(),
+      },
+    );
   }
 }
