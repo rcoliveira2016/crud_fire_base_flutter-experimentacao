@@ -1,28 +1,17 @@
-class UsuarioModel {
+class UserModel {
   String uid;
   String nome;
-  String login;
-  String senha;
   String email;
   String urlPerfil;
   bool ativo;
 
-  UsuarioModel({
-    this.uid,
-    this.nome,
-    this.login,
-    this.senha,
-    this.email,
-    this.ativo,
-    this.urlPerfil,
-  });
+  UserModel({this.uid, this.nome, this.email, this.urlPerfil, this.ativo});
 
-  UsuarioModel.fromJson(Map<String, dynamic> json) {
+  UserModel.fromJson(Map<String, dynamic> json) {
     uid = json['uid'];
     nome = json['Nome'];
-    login = json['Login'];
-    senha = json['Senha'];
     email = json['Email'];
+    urlPerfil = json['UrlPerfil'];
     ativo = json['Ativo'];
   }
 
@@ -30,9 +19,8 @@ class UsuarioModel {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['uid'] = this.uid;
     data['Nome'] = this.nome;
-    data['Login'] = this.login;
-    data['Senha'] = this.senha;
     data['Email'] = this.email;
+    data['UrlPerfil'] = this.urlPerfil;
     data['Ativo'] = this.ativo;
     return data;
   }

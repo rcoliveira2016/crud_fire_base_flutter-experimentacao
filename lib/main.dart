@@ -1,4 +1,5 @@
-import 'package:crud_fire/views/app.dart';
+import 'package:crud_fire/app/init/app_module.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
-void main() => runApp(App());
+void main() => runApp(ModularApp(module: AppModule()));
